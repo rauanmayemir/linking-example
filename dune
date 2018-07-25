@@ -1,0 +1,12 @@
+(library
+ (name linking_binding)
+ (modules binding)
+ (c_names bindings)
+)
+
+(executable
+ (name app)
+ (modules app)
+ (libraries linking_binding)
+ (modes object)
+)
