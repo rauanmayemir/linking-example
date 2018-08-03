@@ -10,3 +10,9 @@
  (libraries linking_binding)
  (modes object)
 )
+
+(rule
+ (targets main)
+ (deps main.c app.exe%{ext_obj})
+ (action (run %{cc} -o %{targets} -I %{ocaml_where} -I . %{deps}
+                    %{ocaml-config:native_c_libraries})))

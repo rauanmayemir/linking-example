@@ -1,3 +1,5 @@
+#define CAML_NAME_SPACE
+
 #include <caml/callback.h>
 
 int main(int argc, char **argv)
